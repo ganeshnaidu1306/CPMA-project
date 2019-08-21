@@ -1,0 +1,139 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 12.972442, lng: 77.580643},
+          zoom: 11
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACf7GEeMX_KJtVqZlP__rcWFJaUprLqZQ&callback=initMap"
+    async defer></script>
+  </body>
+</html>-->
+    <!--  <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, 
+      width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8"
+      src="http://js.api.here.com/v3/3.0/mapsjs-places.js"></script>
+    <link rel="stylesheet" type="text/css" 
+      href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+  </head>
+      <body>
+  <div id="map" style="width: 100%; height: 480px"/>
+  <script type="text/javascript" charset="utf-8">
+    // Instantiate the Platform class with authentication and
+    // authorization credentials:
+    var platform = new H.service.Platform({
+      app_id: 'm5C85GuUHynvNWhfr1BE',
+      app_code: 'OFIDzDKjNxQXeBtFagQuiw'
+    });
+
+    // Instantiate a map inside the DOM element with id map. The
+    // map center is in San Francisco, the zoom level is 10:
+    var map = new H.Map(document.getElementById('map'),
+      platform.createDefaultLayers().normal.map, {
+      center: {lat: 12.9716, lng: 77.5946},
+      zoom: 13
+      });
+
+    // Create a group object to hold map markers:
+    var group = new H.map.Group();
+
+    // Create the default UI components:
+    var ui = H.ui.UI.createDefault(map, platform.createDefaultLayers());
+
+    // Add the group object to the map:
+    map.addObject(group);
+
+    // Obtain a Search object through which to submit search
+    // requests:
+    var search = new H.places.Search(platform.getPlacesService()),
+      searchResult, error;
+
+    // Define search parameters:
+    var params = {
+    // Plain text search for places with the word "hotel"
+    // associated with them:
+      'q': 'metro station',
+    //  Search in the Chinatown district in San Francisco:
+      'at': '12.9716,77.5946'
+    };
+
+    // Define a callback function to handle data on success:
+    function onResult(data) {
+      addPlacesToMap(data.results);
+    }
+
+    // Define a callback function to handle errors:
+    function onError(data) {
+      error = data;
+    }
+
+    // This function adds markers to the map, indicating each of
+    // the located places:
+    function addPlacesToMap(result) {
+      group.addObjects(result.items.map(function (place) {
+      var marker = new H.map.Marker({lat: place.position[0],
+        lng: place.position[1]})
+      return marker;
+      }));
+    }
+
+    // Run a search request with parameters, headers (empty), and
+    // callback functions:
+    search.request(params, {}, onResult, onError);
+
+  </script>
+</body>-->
+<html>
+<head>
+    <title>map</title>
+    <!--<script>
+    function green()
+        {
+            frame.src="//www.google.com/maps/search/green+line+metro+stations/@12.9382801,77.569219,13.56z";
+        }
+    function purple()
+        {
+            frame.src="//www.google.com/maps/search/purple+line+metro+stations/@12.9724562,77.5633769,14.5z"
+        }
+    
+    </script>-->
+    
+</head>
+<body>
+<img src="img/bmap.jpg" height=500px width=100%>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<html>
+
+<head><title>Stops</title></head>
+        <script>
+    
+l=window.localStorage;
+    l.setitem("AGPP","Attiguppe");
+	l.setitem("BYPH",Baiyappanahalli);
+	l.setitem("HSLI",Balagangadharanatha Swamiji Stn., Hosahalli);
+	l.setitem("BSNK",Banashankari);
+	l.setitem("CKPE",Chickpete);
+	l.setitem("SRCS",City Railway Station);
+	l.setitem("CBPK",Cubbon Park);
+	l.setitem("DSH",Dasarahalli);
+	l.setitem("DJNR",Deepanjali Nagar);
+	l.setitem("VDSA",Dr. B. R. Ambedkar Stn., Vidhana Soudha);
+	l.setitem("YPI",Goraguntepalya);
+	l.setitem("HLRU",Halasuru);
+	l.setitem("IDN",Indiranagar);
+	l.setitem("JLHL",Jalahalli);
+	l.setitem("JPN",Jaya Prakash Nagar);
+	
+	l.setitem("KRMT",Krishna Rajendra Market);
+	l.setitem("LBGH",Lalbagh);
+	l.setitem("MIRD",Magadi Road);
+	l.setitem("JYN",Jayanagar);
+    l.setitem("KVPR",Mahakavi Kuvempu road);
+	l.setitem("MHLI",Mahalakshmi);
+	l.setitem("MAGR",Mahathma Gandhi Road);
+	l.setitem("MYRD","Mysore Road");
+	
+	l.setitem("NGSA","Nagasandra");
+	l.setitem("KGWA","Nadaprabhu Kempegowda Station, Majestic");
+    l.setitem("NLC","National College");
+	l.setitem("PEYA","Peenya");
+	l.setitem("PYID","Peenya Industry");
+	l.setitem("RJNR","Rajajinagar");
+	l.setitem("RVR","Rashtreeya Vidyalaya Road");
+	l.setitem("SPGD","Sampige Road");
+	l.setitem("SSFY","Sandal Soap Factory");
+	l.setitem("VSWA","Sir M Visveswaraya Station, Central College");
+	l.setitem("SECE","South End Circle");
+	l.setitem("SPRU","Srirampura");
+	l.setitem("SVRD","Swami Vivekananda Road");
+	l.setitem("TTY","Trinity");
+	l.setitem("VJN","Vijayanagar");
+	l.setitem("PUTH","Yelachenahalli");
+	l.setitem("YPM","Yeshwantpur");
+    
+    
+        </script>
+        <style>
+        
+            table{
+                align-items: center;
+                display:table;
+                border: 1px solid black;
+               align-content: center;
+                border-radius: 0px;
+                text-align: right;
+                width: 100%;
+            }
+            
+            td{
+                width: 150px;
+                font-size: 20;
+                padding-right: 20px;
+            }
+            #sfrom,#sto{
+                padding-left: 15px;
+                font-size: 16;
+                border-radius: 10px;
+                width: 200px;
+            }
+            #te1,#te2,#te3{
+                text-align: center;
+                border: 4px;
+                padding-left: 15px;
+                font-size: 16;
+                border-radius: 10px;
+            }
+            #bu1{
+                margin-right: 20px;
+                font-size: 16;
+                font-family: sans-serif;
+                background-color: #800080;
+                border-radius: 10px;
+                border-color: blanchedalmond;
+                color: aliceblue;
+                height: 40px;
+                width: 150px;
+            }
+            h2{
+                border-radius: 0px;
+                background-color: #800080;
+                color: aliceblue;
+            }
+            th{
+                padding-left: 30px;
+                text-align: left;
+                height: 40px;
+                font-size: 20;
+                background-color: #800080;
+                color: aliceblue;
+                border: 1px solid black;
+            }
+        </style>
+    
+    <body>
+    <center>
+    <br>
+    <table id="table">
+        <th  colspan="3">Stops</th>
+    <tr>
+        <td><br></td>    
+    </tr>
+    <tr>
+        <td>From Station : </td>
+        <td><select id="sfrom">
+    <option value="AGPP">Attiguppe</option>
+	<option value="BYPH">Baiyappanahalli</option>
+	<option value="HSLI">Balagangadharanatha Swamiji Stn., Hosahalli</option>
+	<option value="BSNK">Banashankari</option>
+	<option value="CKPE">Chickpete</option>
+	<option value="SRCS">City Railway Station</option>
+	<option value="CBPK">Cubbon Park</option>
+	<option value="DSH">Dasarahalli</option>
+	<option value="DJNR">Deepanjali Nagar</option>
+	<option value="VDSA">Dr. B. R. Ambedkar Stn., Vidhana Soudha</option>
+	<option value="YPI">Goraguntepalya</option>
+	<option value="HLRU">Halasuru</option>
+	<option value="IDN">Indiranagar</option>
+	<option value="JLHL">Jalahalli</option>
+	<option value="JPN">Jaya Prakash Nagar</option>
+	
+	<option value="KRMT">Krishna Rajendra Market</option>
+	<option value="LBGH">Lalbagh</option>
+	<option value="MIRD">Magadi Road</option>
+	<option value="JYN">Jayanagar</option>
+    <option value="KVPR">Mahakavi Kuvempu road </option>
+	<option value="MHLI">Mahalakshmi</option>
+	<option value="MAGR">Mahathma Gandhi Road</option>
+	<option value="MYRD">Mysore Road</option>
+	
+	<option value="NGSA">Nagasandra</option>
+	<option value="KGWA">Nadaprabhu Kempegowda Station, Majestic</option>
+    <option value="NLC">National College</option>
+	<option value="PEYA">Peenya</option>
+	<option value="PYID">Peenya Industry</option>
+	<option value="RJNR">Rajajinagar</option>
+	<option value="RVR">Rashtreeya Vidyalaya Road</option>
+	<option value="SPGD">Sampige Road</option>
+	<option value="SSFY">Sandal Soap Factory</option>
+	<option value="VSWA">Sir M Visveswaraya Station, Central College</option>
+	<option value="SECE">South End Circle</option>
+	<option value="SPRU">Srirampura</option>
+	<option value="SVRD">Swami Vivekananda Road</option>
+	<option value="TTY">Trinity</option>
+	<option value="VJN">Vijayanagar</option>
+	<option value="PUTH">Yelachenahalli</option>
+	<option value="YPM">Yeshwantpur</option>
+            </select></td>
+    </tr>    
+        <tr>
+        <td><br></td>
+        </tr>
+    <tr>
+        <td>To Station : </td>
+        <td><select id="sto">
+    <option value="AGPP">Attiguppe</option>
+	<option value="BYPH">Baiyappanahalli</option>
+	<option value="HSLI">Balagangadharanatha Swamiji Stn., Hosahalli</option>
+	<option value="BSNK">Banashankari</option>
+	<option value="CKPE">Chickpete</option>
+	<option value="SRCS">City Railway Station</option>
+	<option value="CBPK">Cubbon Park</option>
+	<option value="DSH">Dasarahalli</option>
+	<option value="DJNR">Deepanjali Nagar</option>
+	<option value="VDSA">Dr. B. R. Ambedkar Stn., Vidhana Soudha</option>
+	<option value="YPI">Goraguntepalya</option>
+	<option value="HLRU">Halasuru</option>
+	<option value="IDN">Indiranagar</option>
+	<option value="JLHL">Jalahalli</option>
+	<option value="JPN">Jaya Prakash Nagar</option>
+	
+	<option value="KRMT">Krishna Rajendra Market</option>
+	<option value="LBGH">Lalbagh</option>
+	<option value="MIRD">Magadi Road</option>
+	<option value="JYN">Jayanagar</option><option value="KVPR">Mahakavi Kuvempu road </option>
+	<option value="MHLI">Mahalakshmi</option>
+	<option value="MAGR">Mahathma Gandhi Road</option>
+	<option value="MYRD">Mysore Road</option>
+	
+	<option value="NGSA">Nagasandra</option>
+	<option value="KGWA">Nadaprabhu Kempegowda Station, Majestic</option><option value="NLC">National College</option>
+	<option value="PEYA">Peenya</option>
+	<option value="PYID">Peenya Industry</option>
+	<option value="RJNR">Rajajinagar</option>
+	<option value="RVR">Rashtreeya Vidyalaya Road</option>
+	<option value="SPGD">Sampige Road</option>
+	<option value="SSFY">Sandal Soap Factory</option>
+	<option value="VSWA">Sir M Visveswaraya Station, Central College</option>
+	<option value="SECE">South End Circle</option>
+	<option value="SPRU">Srirampura</option>
+	<option value="SVRD">Swami Vivekananda Road</option>
+	<option value="TTY">Trinity</option>
+	<option value="VJN">Vijayanagar</option>
+	<option value="PUTH">Yelachenahalli</option>
+	<option value="YPM">Yeshwantpur</option>
+            </select></td>
+    </tr>
+        <tr>
+        <td><br></td>
+        </tr>
+        
+    <tr>
+        <td></td>
+        <td><input type="button" id="bu1" value="Show Stops"></td>
+    </tr> 
+    
+        
+    <tr>
+        <div class="list">
+        
+        </div>
+        
+        
+    </tr>
+    
+</body>
+
+</html>
